@@ -13,20 +13,21 @@ class UsersController < ApplicationController
       @errors = @user.errors.full_messages
       render "new"
     end
+  end
 
-    def show
-      if logged_in?
-        @user = User.find_by(id: current_user_id)
-        render "show"
-      else
-        redirect_to "/"
-      end
+  def show
+    if logged_in?
+      @user = User.find_by(id: current_user_id)
+      render "show"
+    else
+      redirect_to "/"
     end
+  end
 
-    private
+  private
 
-    def user_params
-      params.require(:user).permit(:email, :first_name, :last_name, :grad_year, :password, :password_confirmation)
-    end
+  def user_params
+    params.require(:user).permit(:email, :first_name, :last_name, :grad_year, :password, :password_confirmation)
+  end
 
 end
