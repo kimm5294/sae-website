@@ -1,6 +1,17 @@
 <h1>Registration Page</h1>
 
-<form>
+<%= form_for @user, url: {action: "create"} do |f| %>
+  <%= f.text_field :first_name %>
+  <%= f.text_field :last_name %>
+  <%= f.text_field :email %>
+  <%= f.text_field :linkedin %>
+  <%= f.number_field :grad_year %>
+  <%= f.password_field :password %>
+  <%= f.password_field :password_confirmation %>
+  <%= submit_tag("Register") %>
+
+
+<% end %>
 
 
 </form>
