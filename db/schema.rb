@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170611162411) do
     t.string "email", null: false
     t.string "password_digest", null: false
     t.string "linkedin", null: false
+    t.integer "grad_year", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
