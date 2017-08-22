@@ -1,13 +1,13 @@
 <h1>Registration Page</h1>
 
 <%= form_for @user, url: {action: "create"} do |f| %>
-  <%= f.text_field :first_name %>
-  <%= f.text_field :last_name %>
-  <%= f.text_field :email %>
-  <%= f.text_field :linkedin %>
-  <%= f.number_field :grad_year %>
-  <%= f.password_field :password %>
-  <%= f.password_field :password_confirmation %>
+  <%= f.text_field :first_name, placeholder: "First Name" %>
+  <%= f.text_field :last_name, placeholder: "Last Name" %>
+  <%= f.text_field :email, placeholder: "Email" %>
+  <%= f.text_field :linkedin, placeholder: "LinkedIn URL" %>
+  <%= f.number_field :grad_year, placeholder: "Graduation Year" %>
+  <%= f.password_field :password, placeholder: "Password" %>
+  <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
   <%= submit_tag("Register") %>
 
 
